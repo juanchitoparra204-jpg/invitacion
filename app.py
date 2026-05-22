@@ -310,7 +310,7 @@ def abrir_card(titulo_eyebrow, titulo_h1, subtexto=None):
 if st.session_state.pantalla == "landing":
 
     abrir_card(
-        "Una invitación para María Clara",
+        "Una invitación",
         "Hay algo que quiero preguntarte",
         "Sé que apenas nos estamos conociendo, y eso es justo lo que me parece bonito. "
         "Quiero que nuestra primera salida sea algo tuyo, algo que te haga sentir cómoda "
@@ -355,6 +355,12 @@ elif st.session_state.pantalla == "soft_no":
       Y si no, también está bien. Gracias por tu honestidad 🌸
     </p>
     """, unsafe_allow_html=True)
+
+    st.write("")
+
+    mensaje_no = "Hola 🌿 Recibí tu invitación, y la verdad necesito pensarlo un poco. Gracias por el detalle, fue muy bonito."
+    url_wa_no = f"https://wa.me/{TELEFONO}?text={urllib.parse.quote(mensaje_no)}"
+    st.link_button("💬 Hacerle saber", url_wa_no)
 
     st.write("")
     if st.button("← Quiero cambiar mi respuesta"):
