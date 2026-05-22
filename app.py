@@ -310,7 +310,7 @@ def abrir_card(titulo_eyebrow, titulo_h1, subtexto=None):
 if st.session_state.pantalla == "landing":
 
     abrir_card(
-        "Una invitación",
+        "Una invitación para María Clara",
         "Hay algo que quiero preguntarte",
         "Sé que apenas nos estamos conociendo, y eso es justo lo que me parece bonito. "
         "Quiero que nuestra primera salida sea algo tuyo, algo que te haga sentir cómoda "
