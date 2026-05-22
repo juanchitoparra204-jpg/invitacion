@@ -36,8 +36,12 @@ st.markdown("""
 html, body, [class*="css"] {
   font-family: 'Jost', sans-serif !important;
   font-weight: 300;
-  color: var(--ink);
+  color: var(--ink) !important;
 }
+/* Forzar color de texto en párrafos y spans de Streamlit */
+.stApp p, .stApp span, .stApp label { color: var(--ink) !important; }
+div[data-testid="stLinkButton"] a { color: white !important; }
+div[data-testid="stButton"] button { color: white !important; }
 
 /* ── Títulos con Cormorant ── */
 h1, h2, h3 {
@@ -110,11 +114,11 @@ div[data-testid="stRadio"] div[role="radiogroup"] label {
   font-family: 'Jost', sans-serif !important;
   font-style: normal !important;
   font-size: 0.92rem !important;
-  background: white;
-  border: 1px solid var(--divider);
-  border-radius: 12px;
-  padding: 0.65rem 1rem;
-  margin-bottom: 0.4rem;
+  background: white !important;
+  border: 1px solid var(--divider) !important;
+  border-radius: 12px !important;
+  padding: 0.65rem 1rem !important;
+  margin-bottom: 0.4rem !important;
   color: var(--ink) !important;
   transition: background 0.2s;
   cursor: pointer;
@@ -122,6 +126,22 @@ div[data-testid="stRadio"] div[role="radiogroup"] label {
 div[data-testid="stRadio"] div[role="radiogroup"] label:hover {
   background: var(--blush) !important;
   border-color: var(--rose) !important;
+}
+div[data-testid="stRadio"] div[role="radiogroup"] label p,
+div[data-testid="stRadio"] div[role="radiogroup"] label span,
+div[data-testid="stRadio"] div[role="radiogroup"] label div {
+  color: var(--ink) !important;
+  font-family: 'Jost', sans-serif !important;
+  font-style: normal !important;
+  font-size: 0.92rem !important;
+}
+/* Forzar color en todos los párrafos dentro del radio */
+div[data-testid="stRadio"] p {
+  color: var(--ink) !important;
+}
+div[data-testid="stWidgetLabel"] p,
+div[data-testid="stWidgetLabel"] span {
+  color: var(--ink) !important;
 }
 
 /* ── Selectbox ── */
